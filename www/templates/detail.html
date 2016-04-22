@@ -1,0 +1,43 @@
+<ion-view view-title="DETAILS">   
+    <ion-content class="content-product has-subheader">
+        <div class="title-product">
+            <lable class="label-title-product"></lable>
+        </div>
+        <div ng-repeat="item in data">
+            <!-- <div class="col-40 detail-content"> -->
+                <div class="row">
+                    <ion-slide-box class="col col-50 col-center div-image-cart detail-content">
+                        <ion-slide>
+                            <img ng-src="img/product/{{item.img1}}" class="img-detail div-button-cart">                        
+                        </ion-slide>
+                        <ion-slide>
+                            <img ng-src="img/product/{{item.img2}}" class="img-detail">                        
+                        </ion-slide>
+                    </ion-slide-box>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-center div-button-cart">
+                    <label class="detail-name">{{item.name}}</label><br/>
+                    <label class="detail-price">${{item.price}}.00</label>
+                </div>
+                </div>
+                
+                <div class="col-80 detail-product-content">
+                    <label>Code: {{item.code}}</label><br/>
+                    <label>Made in: {{item.made}}</label><br/>
+                    <label>Type: {{item.type}}</label><br/>
+                </div>
+                <div class="row">
+                    <div class="col col-center div-button-cart">
+                        <button class="button-add-cart" ng-click="addProductItem(item)">                            
+                                <label class="ion-ios-cart-outline button-ico-add"></label>
+                                <label class="label-button-add">ADD TO CART</label>                         
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

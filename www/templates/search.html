@@ -1,0 +1,21 @@
+<ion-view view-title="Search">   
+    <ion-content class="content-product has-subheader">
+        <div>
+            <div class="title-product">
+                <lable class="label-title-product">Search Result</lable>
+            </div>
+        </div>
+        <ion-list >
+          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="datas in data | filter: {name: name}">
+            <div class="col-40 img-product">
+                <img ng-src="img/product/{{datas.img1}}" class="img-product">
+            </div>
+            <div class="col-60">
+                <h2>{{datas.name}}</h2>
+                <p class="price-product-list">${{datas.price}}.00</p>
+                <a ui-sref="app.detail({code: datas.code})" class="myButton">Details</a>
+            </div>
+          </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,282 @@
+.menu-header {
+    background-color: black;
+}
+
+.inp-search {
+    height: 20px !important;
+    margin-top: 4px;
+    width: 190px;
+    margin-left: 10px;
+}
+
+.header-title {
+    background-color: black !important;
+}
+
+.head-title {
+    margin-top: 2px;
+    width: 100% !important;
+    text-align: center;
+    color: white;
+}
+
+.head-title-bgr {
+    background-color: black !important;
+}
+
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-product {
+    margin-left: 15px;
+    font-size: 15px;
+    ;
+}
+
+.icon-product {
+    float: right;
+    font-size: 15px;
+}
+
+.title-product {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.label-title-product {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.price-product-list {
+    color: red !important;
+}
+
+.img-product {
+    text-align: center;
+}
+
+.list-product{
+    /* padding: 0 !important; */
+    margin: 0px !important;
+    padding-right: 0px !important;
+}
+.content-product-list{
+    margin-top: 55px;
+}
+.bgr-item-product{
+    padding-left: 0px !important;
+}
+
+.myButton {
+	background-color: lightgray;
+    -moz-border-radius: 5px;
+    /* -webkit-border-radius: 5px; */
+    /* border-radius: 5px; */
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 5px 15px;
+    text-decoration: none;
+    /* text-shadow: 0px 2px 9px #5c5c5c; */
+    /* padding-top: 15px; */
+    margin-top: 15px;
+}
+.myButton:hover {
+	background-color:#808080;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.icon-toggle{
+    float: right;
+}
+.lb-item{
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
+.lb-icon-item{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.span-bag-icon{
+    position: fixed !important;
+    top: 15px !important;
+    right: 18.5px !important;
+    color: red;
+}        
+.home-icon{
+    font-size: 31px;
+    margin-left: 15px;
+    color: black;
+}
+.home-div{
+    padding: 7px 0 7px 0;
+}
+.img-product{
+    /* width: 80px; */
+    height: 100px;
+    margin-top: 1.5px;
+}
+.content-product{
+    bottom: 44px;
+}
+
+.img-detail{
+    width: 100%;
+}
+
+.detail-content{
+    /*margin-left: 95px;*/
+}
+
+.div-name{
+    margin-left: 30px;
+    text-align: center;
+}
+.detail-name{
+    font-size: 21px;
+    color: black;
+}
+.detail-price{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.detail-product-content{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.button-add-cart{
+    width: 155px;
+    margin-top: 18px;
+    background-color: lightgray;
+    height: 35px;
+}
+
+.button-ico-add{
+    margin-left: 12px;
+}
+.title-button-ico{
+    margin-left: 15px;
+}
+.label-button-add{
+    font-size: 13px;
+    margin-left: 10px;
+    padding-right: 6px;
+}
+.popup-title {
+  color: blue !important;
+}
+.popup-body{
+    color: black !important;
+    text-align: center;
+  
+}
+.tab-footer{
+    padding-top: 0px !important;
+}
+.icon-fb{
+    color: #3B5998;
+}
+.icon-youtube{
+    color: red;
+}
+.icon-twitter{
+    color: #1DA1F2;
+}
+.div-button-cart{
+    text-align: center;
+}
+.div-image-cart{
+    text-align: center;
+    margin-left: 25%;
+}
+.search-field{
+    padding: 0 !important;
+}
+.filter-price{
+    margin-top: 12px;
+}
+.icon-insta{
+    color: #8F634E;
+}
+.image-cart{
+    margin-left: 10px !important;
+}
+.content-cart{
+    margin-left: 4% !important;
+    margin-top: 10px;
+    text-align: center;
+}
+.icon-remove{
+    font-size: 20px;
+    color: red !important;
+}
+.content-quantity{
+    margin-left: 2% !important;
+    margin-top: 10px;
+    text-align: center;
+}
+.total-price{
+    float: right;
+    margin-right: 5px;
+    
+}
+.label-total{
+    font-size: 15px;
+    font-weight: bold;
+}
+.label-total-price{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+.div-icon-payment{
+    margin-left: 10px;
+}
+.icon-card{
+    font-size: 20px;
+}
+.icon-placeholder{
+    font-size: 24px;
+}
+.button-pay{
+    width: 95%;
+}
+.div-button-pay{
+    text-align: center;
+    margin-top: 10px;
+}
+.err-numcart{
+    width: 100%;
+    text-align: center;
+}
+.img-ads{
+    width: 100%;
+}
+.slide-box-ads{
+    margin-top: 12px;
+}
+.icon-fashion-home{
+    width: 80%;
+}
+.title-home{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.img-ads-home{
+    width: 95%;
+}
