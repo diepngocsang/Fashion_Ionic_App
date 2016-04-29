@@ -43,53 +43,55 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope) {
   // $scope.headerItem=stateParams(subName);
-  $scope.groups = [
-    {
-      name: 'Men',      
-      // icon: 'ion-clipboard',
-      items: [
-        {
-          subName: 'T-shirt',
-          href: "app.product({type: 'T-shirt Men'})"
-        },
-        {
-          subName: 'Shirt',
-          href: "app.product({type: 'Shirt Men'})"
-        },
-        {
-          subName: 'Jean',
-          href: "app.product({type: 'Jean Men'})"
-        },
-        {
-          subName: 'Suit',
-          href: "app.product({type: 'Suit Men'})"
-        }
-      ]
-    },
-    {
-      name: 'Women',
+  // $scope.groups = [
+  //   {
+  //     name: 'Men',      
+  //     // icon: 'ion-clipboard',
+  //     items: [
+  //       {
+  //         subName: 'T-shirt',
+  //         href: "app.product({type: 'T-shirt Men'})"
+  //       },
+  //       {
+  //         subName: 'Shirt',
+  //         href: "app.product({type: 'Shirt Men'})"
+  //       },
+  //       {
+  //         subName: 'Jean',
+  //         href: "app.product({type: 'Jean Men'})"
+  //       },
+  //       {
+  //         subName: 'Suit',
+  //         href: "app.product({type: 'Suit Men'})"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Women',
      
-      // icon: 'ion-android-alert',
-      items: [
-        {
-          subName: 'Dress',
-          href: "app.product-women({type: 'Dress Girl'})"
-        },
-        {
-          subName: 'Jean',
-          href: "app.product-women({type: 'Jean Girl'})"
-        },
-        {
-          subName: 'Shirt',
-          href: "app.product-women({type: 'Shirt Girl'})"
-        },
-        {
-          subName: 'Suit',
-          href: "app.product-women({type: 'Suit Girl'})"
-        }
-      ]
-    }
-  ];
+  //     // icon: 'ion-android-alert',
+  //     items: [
+  //       {
+  //         subName: 'Dress',
+  //         href: "app.product-women({type: 'Dress Girl'})"
+  //       },
+  //       {
+  //         subName: 'Jean',
+  //         href: "app.product-women({type: 'Jean Girl'})"
+  //       },
+  //       {
+  //         subName: 'Shirt',
+  //         href: "app.product-women({type: 'Shirt Girl'})"
+  //       },
+  //       {
+  //         subName: 'Suit',
+  //         href: "app.product-women({type: 'Suit Girl'})"
+  //       }
+  //     ]
+  //   }
+  // ];
+  var ref = new Firebase("https://finalassignment.firebaseio.com/menu");
+  $scope.group=$firebaseArray(ref);
   $scope.toggleGroup = function(group) {
     group.show = !group.show;
   };
@@ -113,7 +115,7 @@ angular.module('starter.controllers', [])
          var code = $stateParams.code;
          $scope.data = $firebaseArray(ref.orderByChild('code').equalTo(code));         
     })
-.controller('homeController',function ($state,$scope,$firebaseArray,$ionicPopup){
+.controller('homeController',function ($state,$scope,$firebaseArray,$ionicPopup,$window){
         $scope.numcart=0;
         $scope.shopcart=[];
         $scope.user={};
@@ -176,7 +178,8 @@ angular.module('starter.controllers', [])
                         $scope.user={};
                         $scope.shopcart=[];                
                         $scope.numcart=0;
-                        $state.go('app.home');
+                        $state.go('app');
+                        $window.location.reload();
                       }
                     });
                 } 
