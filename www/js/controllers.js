@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope,$firebaseArray) {
   // $scope.headerItem=stateParams(subName);
   // $scope.groups = [
   //   {
