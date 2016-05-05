@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic','firebase'])
+angular.module('starter', ['ionic', 'starter.controllers','firebase'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -90,7 +90,6 @@ angular.module('starter', ['ionic','firebase'])
     }
   });
   $urlRouterProvider.otherwise('/app/home');
-})
-.constant('GET_URL','https://finalassignment.firebaseio.com/');
+});
 
 

@@ -42,56 +42,8 @@ angular.module('starter.controllers', [])
 
 
 .controller('AppCtrl', function($scope,$firebaseArray) {
-  // $scope.headerItem=stateParams(subName);
-  // $scope.groups = [
-  //   {
-  //     name: 'Men',      
-  //     // icon: 'ion-clipboard',
-  //     items: [
-  //       {
-  //         subName: 'T-shirt',
-  //         href: "app.product({type: 'T-shirt Men'})"
-  //       },
-  //       {
-  //         subName: 'Shirt',
-  //         href: "app.product({type: 'Shirt Men'})"
-  //       },
-  //       {
-  //         subName: 'Jean',
-  //         href: "app.product({type: 'Jean Men'})"
-  //       },
-  //       {
-  //         subName: 'Suit',
-  //         href: "app.product({type: 'Suit Men'})"
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     name: 'Women',
-     
-  //     // icon: 'ion-android-alert',
-  //     items: [
-  //       {
-  //         subName: 'Dress',
-  //         href: "app.product-women({type: 'Dress Girl'})"
-  //       },
-  //       {
-  //         subName: 'Jean',
-  //         href: "app.product-women({type: 'Jean Girl'})"
-  //       },
-  //       {
-  //         subName: 'Shirt',
-  //         href: "app.product-women({type: 'Shirt Girl'})"
-  //       },
-  //       {
-  //         subName: 'Suit',
-  //         href: "app.product-women({type: 'Suit Girl'})"
-  //       }
-  //     ]
-  //   }
-  // ];
   var ref = new Firebase("https://finalassignment.firebaseio.com/menu");
-  $scope.group=$firebaseArray(ref);
+  $scope.groups=$firebaseArray(ref);
   $scope.toggleGroup = function(group) {
     group.show = !group.show;
   };
@@ -148,12 +100,12 @@ angular.module('starter.controllers', [])
                     $scope.numcart =$scope.numcart +1;
                     $ionicPopup.alert({
                         title: 'Success',
-                        content: 'Added this product into your cart'
+                        content: 'Adding this product into your cart'
                       });
                 }else{
                     $ionicPopup.alert({
                         title: 'Warning',
-                        content: 'This product that contained in your cart'
+                        content: 'This product existed in your cart'
                       });
                 }                
             }
@@ -172,13 +124,13 @@ angular.module('starter.controllers', [])
                   $scope.postsRef.$add($scope.user);                  
                   $ionicPopup.alert({
                       title: 'Success',
-                      content: 'Thank you to order our products! We will contact to you as soon as possible to confirm your order!'
+                      content: 'Thank you for your ordering our products! We will contact you as soon as possible to confirm your order!'
                     }).then(function(ok){
                       if(ok){
                         $scope.user={};
                         $scope.shopcart=[];                
                         $scope.numcart=0;
-                        $state.go('app');
+                        $state.go('app.home');
                         $window.location.reload();
                       }
                     });
