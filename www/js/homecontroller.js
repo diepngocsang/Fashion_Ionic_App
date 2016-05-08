@@ -62,8 +62,9 @@ angular.module('starter')
                         $scope.user={};
                         $scope.shopcart=[];                
                         $scope.numcart=0;
-                        $state.go('app');
-                        $window.location.reload();
+                        $state.go('app.home');
+                        $window.location.reload(true);
+                        // location.reload(true);
                       }
                     });
                 } 

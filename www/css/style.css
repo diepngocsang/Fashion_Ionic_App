@@ -111,10 +111,10 @@
 }
 
 .span-bag-icon{
-    position: fixed !important;
-    top: 15px !important;
-    right: 18.5px !important;
+    top: -23px !important;
+    right: 3.5px !important;
     color: red;
+    
 }        
 .home-icon{
     font-size: 31px;
@@ -163,6 +163,7 @@
     margin-top: 18px;
     background-color: lightgray;
     height: 35px;
+    padding-right: 10px;
 }
 
 .button-ico-add{
