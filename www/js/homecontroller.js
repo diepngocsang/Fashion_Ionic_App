@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('homeController',function ($state,$scope,$firebaseArray,$ionicPopup,$window,GET_URL){
+.controller('homeController',['$state','$scope','$firebaseArray','$ionicPopup','$window','GET_URL',function ($state,$scope,$firebaseArray,$ionicPopup,$window,GET_URL){
         $scope.numcart=0;
         $scope.shopcart=[];
         $scope.user={};
@@ -79,4 +79,4 @@ angular.module('starter')
             });
             return total;
         }
-    });
+    }]);

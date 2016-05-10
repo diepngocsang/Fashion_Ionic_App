@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller("ProductCtrl",function($scope,$firebaseArray,$stateParams,GET_URL){
+.controller("ProductCtrl",['$scope','$firebaseArray','$stateParams','GET_URL',function($scope,$firebaseArray,$stateParams,GET_URL){
          var ref = new Firebase(GET_URL+"product");
          var type = $stateParams.type;
          $scope.type= type;
@@ -9,4 +9,4 @@ angular.module('starter')
          $scope.totalPage=function(){
             return Math.ceil($scope.data.length/$scope.sizePage);                
          }
-    });
+    }]);
