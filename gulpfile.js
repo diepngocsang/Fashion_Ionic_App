@@ -10,30 +10,37 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
-
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 var paths = {
   sass: ['./scss/**/*.scss'],
   uglify: ['./www/js/*.js']
 };
 
-gulp.task('default', ['sass','watch','install','git-check','uglify']);
+gulp.task('default', ['sass','watch','install','git-check','useref','image']);
+
+gulp.task('image',function(){
+  return gulp.src('www/img/*.+(png|jpg|gif|svg|jpeg)')
+  .pipe(imagemin({
+    interlaced:true
+  }))
+  .pipe(gulp.dest('dist/images'))
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('www/fonts/**/*')
+  .pipe(gulp.dest('dist/fonts'))
+});
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/*.scss')
+  gulp.src('./www/scss/*.scss')
     .pipe(sass())
     .on('error', sass.logError)
-    .pipe(gulp.dest('./www/dist/'))
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/dist/'))
-    .on('end', done);
+    .pipe(gulp.dest('./www/css/'))
 });
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass'])
-  // gulp.watch(paths.uglify, ['uglify']);
 });
 
 gulp.task('useref', function(){
@@ -47,12 +54,6 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
-
-// gulp.task('uglify', function () {
-//     return gulp.src('www/js/*.js')
-//         .pipe(concat('fashion.app.js'))        
-//         .pipe(gulp.dest('dist'));
-// });
 
 gulp.task('install', ['git-check'], function() {
   return bower.commands.install()
