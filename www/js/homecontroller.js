@@ -16,9 +16,9 @@ angular.module('starter')
                   $scope.shopcart.splice($scope.shopcart.indexOf(code),1);
                   $scope.numcart = $scope.numcart - 1;
                 } 
-             });            
+             });
         };        
-        $scope.addProductItem = function(code){            
+        $scope.addProductItem = function(code){
             if($scope.shopcart.indexOf(code)<=0){
                 var checkCode = true;
                 code.quantity=1;
@@ -39,10 +39,10 @@ angular.module('starter')
                         title: 'Warning',
                         content: 'This product contained in your cart'
                       });
-                }                
+                }
             }
         };
-        $scope.addCartToFirebase = function(){         
+        $scope.addCartToFirebase = function(){
             var ref = new Firebase(GET_URL+"cart/post");
             $scope.postsRef = $firebaseArray(ref);
             $scope.quantity= $scope.shopcart;
@@ -53,18 +53,20 @@ angular.module('starter')
              });
             confirmPopup.then(function(res) {
                if(res) {
-                  $scope.postsRef.$add($scope.user);                  
+                  $scope.postsRef.$add($scope.user);
                   $ionicPopup.alert({
                       title: 'Success',
                       content: 'Thank you for ordering our products! We will contact to you as soon as possible to confirm your order!'
                     }).then(function(ok){
                       if(ok){
                         $scope.user={};
-                        $scope.shopcart=[];                
+                        $scope.shopcart=[];
                         $scope.numcart=0;
                         $state.go('app.home');
-                        $window.location.reload(true);
-                        // location.reload(true);
+                        setTimeout(function(){ 
+                           $window.location.reload()
+                        }, 100);
+                        // $window.location.reload(true);
                       }
                     });
                 } 
