@@ -18,9 +18,15 @@
             </div>
             <div class="col-10 content-quantity">
                 
-                <select ng-options="quantity for quantity in ['1', '2', '3','4','5']" ng-model="item.quantity" ng-init="item.quantity='1'">
+                <select ng-options="quantity for quantity in ['1', '2', '3','4','5']" ng-model="item.quantity" ng-init="item.quantity">
                         </select>
-
+                        <!-- <select ng-model="item.quantity"  >
+                            <option value="1" selected="selected">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> -->
             </div>
             <div class="col-10 content-cart">
                 ${{item.quantity*item.price}}

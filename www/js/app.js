@@ -69,6 +69,8 @@ angular.module('starter', ['ionic','firebase'])
         'menuContent': {
           templateUrl: 'templates/home.html',
           controller: 'homeController'
+          
+          
         }
       }
     });
