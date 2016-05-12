@@ -63,9 +63,10 @@ angular.module('starter')
                         $scope.shopcart = [];
                         $scope.numcart = 0;
                         $state.go('app.home');
+                        //Return Home Page after order the product with no Back button and to make sure that get back to the first time open the app
                         setTimeout(function(){ 
                            $window.location.reload()
-                        }, 100);
+                        }, 50);
                       }
                     });
                 } 
