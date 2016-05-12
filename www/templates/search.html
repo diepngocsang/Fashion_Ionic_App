@@ -6,14 +6,14 @@
             </div>
         </div>
         <ion-list >
-          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="datas in data | filter: {name: name}">
+          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="data in data | filter: {name: name}">
             <div class="col-40 img-product">
-                <img ng-src="img/product/{{datas.img1}}" class="img-product">
+                <img ng-src="img/product/{{data.img1}}" class="img-product">
             </div>
             <div class="col-60">
-                <h2>{{datas.name}}</h2>
-                <p class="price-product-list">${{datas.price}}.00</p>
-                <a ui-sref="app.detail({code: datas.code})" class="myButton">Details</a>
+                <h2>{{data.name}}</h2>
+                <p class="price-product-list">${{data.price}}</p>
+                <a ui-sref="app.detail({code: data.code})" class="myButton">Details</a>
             </div>
           </ion-item>
         </ion-list>
