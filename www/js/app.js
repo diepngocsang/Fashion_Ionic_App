@@ -77,6 +77,6 @@ angular.module('starter', ['ionic','firebase'])
     
   $urlRouterProvider.otherwise('/app/home');
 })
-.constant('GET_URL','https://finalassignment.firebaseio.com/');
+.constant('STORE_URL','https://finalassignment.firebaseio.com/');
 
 

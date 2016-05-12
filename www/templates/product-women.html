@@ -5,7 +5,7 @@
                 <div class="input-label">
                     Filter by Price:
                 </div>
-                <select ng-model="chooseprice">
+                <select ng-model="choosePrice">
                     <option value="">Choose an option</option>
                     <option value="price">Low - High</option>
                     <option value="-price">High - Low</option>
@@ -14,18 +14,18 @@
         </div>
         <div>
             <div class="title-product">
-                <lable class="label-title-product" ng-bind="type"></lable>
+                <lable class="label-title-product">{{type}}</lable>
             </div>
         </div>
         <ion-list >
-          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="datas in data | orderBy: chooseprice">
+          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="data in data | orderBy: choosePrice">
             <div class="col-40 img-product">
-                <img ng-src="img/product/{{datas.img1}}" class="img-product">
+                <img ng-src="img/product/{{data.img1}}" class="img-product">
             </div>
             <div class="col-60">
-                <h2>{{datas.name}}</h2>
-                <p class="price-product-list">${{datas.price}}.00</p>
-                <a ui-sref="app.detail({code: datas.code})" class="myButton">Details</a>
+                <h2>{{data.name}}</h2>
+                <p class="price-product-list">${{data.price}}.00</p>
+                <a ui-sref="app.detail({code: data.code})" class="myButton">Details</a>
             </div>
           </ion-item>
         </ion-list>
