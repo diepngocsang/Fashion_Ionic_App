@@ -4,9 +4,4 @@ angular.module('starter')
          var type = $stateParams.type;
          $scope.type= type;
          $scope.data = $firebaseArray(ref.orderByChild('type').equalTo(type));
-         $scope.nowPage = 0;
-         $scope.sizePage = 8;
-         $scope.totalPage = function(){
-            return Math.ceil($scope.data.length / $scope.sizePage);                
-         }
     }]);

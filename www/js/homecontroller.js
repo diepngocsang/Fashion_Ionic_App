@@ -66,7 +66,6 @@ angular.module('starter')
                         setTimeout(function(){ 
                            $window.location.reload()
                         }, 100);
-                        // $window.location.reload(true);
                       }
                     });
                 } 

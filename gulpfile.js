@@ -3,21 +3,17 @@ var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
 var sh = require('shelljs');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
 var paths = {
-  sass: ['./scss/**/*.scss'],
-  uglify: ['./www/js/*.js']
+  sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass','watch','install','git-check','useref','image']);
+gulp.task('default', ['sass','watch','install','git-check','useref','image','fonts']);
 
 gulp.task('image',function(){
   return gulp.src('www/img/*.+(png|jpg|gif|svg|jpeg)')

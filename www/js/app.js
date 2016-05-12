@@ -69,8 +69,6 @@ angular.module('starter', ['ionic','firebase'])
         'menuContent': {
           templateUrl: 'templates/home.html',
           controller: 'homeController'
-          
-          
         }
       }
     });
@@ -78,5 +76,3 @@ angular.module('starter', ['ionic','firebase'])
   $urlRouterProvider.otherwise('/app/home');
 })
 .constant('STORE_URL','https://finalassignment.firebaseio.com/');
-
-
