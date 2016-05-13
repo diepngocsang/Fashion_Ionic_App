@@ -101,9 +101,6 @@
 .home-div {
   padding: 7px 0; }
 
-.content-product {
-  bottom: 44px; }
-
 .img-detail {
   width: 100%; }
 
@@ -227,19 +224,22 @@
   width: 100%;
   text-align: center; }
 
-.img-ads {
-  width: 100%; }
-
-.slide-box-ads {
+/*.slide-box-ads {
   margin-top: 12px; }
 
 .icon-fashion-home {
   width: 80%; }
 
-.title-home {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px; }
-
 .img-ads-home {
   width: 95%; }
+
+.img-ads {
+  width: 100%; }
+
+.content-product {
+  bottom: 44px; }
+
+  .title-home {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px; }*/
