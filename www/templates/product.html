@@ -1,6 +1,6 @@
 <ion-view view-title="Men Fashion">   
-    <ion-content class="content-product has-subheader">
-        <div class="filter-price">
+    <ion-content class="content--productdetail has-subheader">
+        <div class="filter__productprice">
             <label class="item item-input item-select">
                 <div class="input-label">
                     Filter by Price:
@@ -13,19 +13,19 @@
             </label>
         </div>
         <div>
-            <div class="title-product">
-                <lable class="label-title-product">{{type}}</lable>
+            <div class="labelproduct">
+                <lable class="labelproduct__title">{{type}}</lable>
             </div>
         </div>
         <ion-list >
-          <ion-item class="item item-thumbnail-left bgr-item-product row list-product" ng-repeat="data in data | orderBy: choosePrice">
-            <div class="col-40 img-product">
-                <img ng-src="img/product/{{data.img1}}" class="img-product">
+          <ion-item class="item item-thumbnail-left item__backgroundproduct row list-product" ng-repeat="data in data | orderBy: choosePrice">
+            <div class="col-40 image__product">
+                <img ng-src="img/product/{{data.img1}}" class="image__product">
             </div>
-            <div class="col-60">
+            <div class="col-60 item__detailproduct">
                 <h2>{{data.name}}</h2>
-                <p class="price-product-list">${{data.price}}</p>
-                <a ui-sref="app.detail({code: data.code})" class="myButton">Details</a>
+                <p class="item__priceproduct">${{data.price}}</p>
+                <a ui-sref="app.detail({code: data.code, name: data.name})" class="button__detailproduct">Details</a>
             </div>
           </ion-item>
         </ion-list>

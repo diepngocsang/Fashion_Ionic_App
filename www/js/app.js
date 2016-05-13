@@ -38,7 +38,7 @@ angular.module('starter', ['ionic','firebase'])
       }
     })
   .state('app.detail', {
-      url: '/detail/:code',
+      url: '/detail/:code:name',
       views: {
         'menuContent': {
           templateUrl: 'templates/detail.html',

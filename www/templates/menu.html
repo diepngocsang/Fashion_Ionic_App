@@ -9,11 +9,11 @@
             </ion-nav-buttons>
             <ion-nav-buttons side="right" >
                 <i class="button button-icon ion-bag" ng-disabled="numcart==0" ui-sref="app.cart" >
-                  <span class="badge span-bag-icon">{{numcart}}</span>
+                  <span class="badge icon__menubag">{{numcart}}</span>
                 </i>                
             </ion-nav-buttons>            
         </ion-nav-bar>
-        <div class="bar bar-subheader search-field">
+        <div class="bar bar-subheader subheader__searchfield">
             <div class="item item-input-inset">
                 <label class="item-input-wrapper">
                   <input type="text" placeholder="Search by name..." ng-model="search">
@@ -23,30 +23,30 @@
               </div>
         </div>
         <ion-nav-view name="menuContent"></ion-nav-view>
-        <div class="tabs tabs-icon-only tab-footer">
+        <div class="tabs tabs-icon-only tabs__menufooter">
           <a class="tab-item tab-facebook">
-            <i class="icon ion-social-facebook icon-fb"></i>
+            <i class="icon ion-social-facebook icon__menufacebook"></i>
           </a>
           <a class="tab-item">
-            <i class="icon ion-social-twitter icon-twitter"></i>
+            <i class="icon ion-social-twitter icon__menutwitter"></i>
           </a>
           <a class="tab-item">
-            <i class="icon ion-social-youtube icon-youtube"></i>
+            <i class="icon ion-social-youtube icon__menuyoutube"></i>
           </a>
           <a class="tab-item">
-            <i class="icon ion-social-instagram icon-insta"></i>
+            <i class="icon ion-social-instagram icon__menuinstagram"></i>
           </a>
         </div>
     </ion-side-menu-content>
     <ion-side-menu side="left">
-        <ion-header-bar class="bar-stable head-title-bgr">
-            <div class="head-title">
-                <label class="menu-ti tle">FASHION</label>
+        <ion-header-bar class="bar-stable headmenu">
+            <div class="headmenu--title">
+                <label class="headmenu__text">FASHION</label>
             </div>
         </ion-header-bar>
         <ion-content>
-            <div class="home-div" menu-close ui-sref="app.home">
-                <a class="ion-ios-home home-icon" ></a>
+            <div class="menu__detail" menu-close ui-sref="app.home">
+                <a class="ion-ios-home icon__menuhome" ></a>
             </div>
             <ion-list>
                 <div ng-repeat="group in group">
@@ -54,13 +54,13 @@
                             ng-click="toggleGroup(group) "
                             ng-class="{active: isGroupShown(group)}">
                     {{group.name}}
-                    <i class="icon icon-toggle" ng-class="isGroupShown(group) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                    <i class="icon icon__menutoggle" ng-class="isGroupShown(group) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
                   </ion-item>
                   <ion-item menu-close class="item-accordion"
                             ng-repeat="item in group.items"
                             ng-show="isGroupShown(group)" ui-sref="{{item.href}}">
-                        <label class="ion-arrow-right-b lb-icon-item"></label>
-                        <a class="lb-item">{{item.subName}}</a>
+                        <label class="ion-arrow-right-b icon__menuitem"></label>
+                        <a class="label__menuitem">{{item.subName}}</a>
                   </ion-item>
                 </div>
       </ion-list>      
