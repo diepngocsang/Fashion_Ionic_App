@@ -1,39 +1,35 @@
 <ion-view view-title="DETAILS">
     <ion-content class="content--detailproduct has-subheader">
-        <!-- <div class="title-product">
-            <lable class="label-title-product"></lable>
-        </div> -->
         <div ng-repeat="item in data" class="content__detailproduct">
             <div class="row">
-                <ion-slide-box class="col col-50 col-center div-image-cart detail-content">
+                <ion-slide-box class="col col-50 col-center slidebox__detailproduct">
                 <ion-slide>
-                <img ng-src="img/product/{{item.img1}}" class="img-detail div-button-cart">
+                <img ng-src="img/product/{{item.img1}}" class="slidebox--detailimage slidebox--detailbutton">
                 </ion-slide>
                 <ion-slide>
-                <img ng-src="img/product/{{item.img2}}" class="img-detail">
+                <img ng-src="img/product/{{item.img2}}" class="slidebox--detailimage">
                 </ion-slide>
                 </ion-slide-box>
             </div>
             <div class="row">
-                <div class="col col-center div-button-cart">
-                    <label class="detail-name">{{item.name}}</label><br/>
-                    <label class="detail-price">${{item.price}}</label>
+                <div class="col col-center">
+                    <label class="label__namedetail">{{item.name}}</label><br/>
+                    <label class="label__pricedetail">${{item.price}}</label>
                 </div>
             </div>
-            <div class="col-80 detail-product-content">
+            <div class="col col-center">
                 <label>Code: {{item.code}}</label><br/>
                 <label>Made in: {{item.made}}</label><br/>
                 <label>Type: {{item.type}}</label><br/>
             </div>
             <div class="row">
-                <div class="col col-center div-button-cart">
-                    <button class="button-add-cart" ng-click="addProductItem(item)">
-                    <label class="ion-ios-cart-outline button-ico-add"></label>
-                    <label class="label-button-add">ADD TO CART</label>
+                <div class="col col-center">
+                    <button class="button__addtocart" ng-click="addProductItem(item)">
+                    <label class="ion-ios-cart-outline"></label>
+                    <label class="button__labeladd">ADD TO CART</label>
                     </button>
                 </div>
             </div>
-            
         </div>
     </ion-content>
 </ion-view>

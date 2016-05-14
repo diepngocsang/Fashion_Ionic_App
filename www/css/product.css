@@ -1,7 +1,7 @@
 .content--productdetail{
   text-align: center;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 44px;
 }
 .filter__productprice{
   margin-top: 12px;
@@ -26,6 +26,7 @@
   text-align: center;
   height: 100px;
   margin-top: 1.5px;
+  margin-bottom: 3.5px;
 }
 .item__priceproduct{
   color: red !important;
