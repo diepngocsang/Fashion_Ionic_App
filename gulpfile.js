@@ -30,6 +30,7 @@ gulp.task('fonts', function() {
 
 gulp.task('sass', function(done) {
   gulp.src('./www/scss/*.scss')
+    .pipe(concat('style.scss'))
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/css/'))
