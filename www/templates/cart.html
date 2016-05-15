@@ -1,67 +1,67 @@
 <ion-view view-title="Payment">
-    <ion-content class="content-product has-subheader">
+    <ion-content class="content--cart has-subheader">
         <div>
-            <div class="title-product">
-                <lable class="label-title-product">Your Cart</lable>
+            <div class="labelcart">
+                <lable class="labelcart__title">Your Cart</lable>
             </div>
-            <div ng-show="numcart==0" class="err-numcart">
+            <div ng-show="numcart==0" class="labelcart__err">
                 <label>There is no item in your cart</label>
             </div>
         </div>
         <ion-list >
-        <ion-item class="item item-thumbnail-left bgr-item-product row  list-product" ng-repeat="item in shopcart">
-        <div class="col-30 img-product image-cart">
-            <img ng-src="img/product/{{item.img1}}" class="img-product">
+        <ion-item class="item item-thumbnail-left item__backgroundcart row  list-product" ng-repeat="item in shopcart">
+        <div class="col-30 image__cart image--cart">
+            <img ng-src="img/product/{{item.img1}}" class="image__cart">
         </div>
-        <div class="col-33 content-cart">
+        <div class="col-33 label__itemcart">
             <h2>{{item.name}}</h2>
         </div>
-        <div class="col-10 content-quantity">            
+        <div class="col-10 dropdown__itemcart">            
             <select ng-options="quantity for quantity in ['1', '2', '3','4','5']" ng-model="item.quantity" ng-init="item.quantity">
             </select>
         </div>
-        <div class="col-10 content-cart">
+        <div class="col-10 label__itemcart">
             ${{item.quantity*item.price}}
         </div>
-        <div class="col-10 content-cart responsive-sm" >
-            <a class="icon ion-minus-circled icon-remove" ng-click="delProductItem(item)"></a>
+        <div class="col-10 label__itemcart" >
+            <a class="icon ion-minus-circled icon__removeitem" ng-click="delProductItem(item)"></a>
         </div>
         </ion-item>
         </ion-list>
-        <div class="total-price" ng-hide="numcart==0">
-            <label class="label-total">Total:</label>
-            <label class="label-total-price" >${{getTotal(shopcart)}}</label>
+        <div class="labelpricecart" ng-hide="numcart==0">
+            <label class="labelpricecart__totallabel">Total:</label>
+            <label class="labelpricecart__pricelabel" >${{getTotal(shopcart)}}</label>
         </div>
         <div style="clear: both;"></div>
         <div class="list list-inset form-group" ng-hide="numcart==0">
             <label class="item item-input">
-                <i class="icon ion-ios-person placeholder-icon icon-placeholder"></i>
+                <i class="icon ion-ios-person placeholder-icon icon__placeholder"></i>
                 <input type="text" placeholder="First Name" ng-disabled="numcart==0" ng-model="user.first">
             </label>
             <label class="item item-input">
-                <i class="icon ion-ios-person placeholder-icon icon-placeholder"></i>
+                <i class="icon ion-ios-person placeholder-icon icon__placeholder"></i>
                 <input type="text" placeholder="Last Name" ng-disabled="numcart==0" ng-model="user.last">
             </label>
             <label class="item item-input">
-                <i class="icon ion-ios-email placeholder-icon icon-placeholder"></i>
+                <i class="icon ion-ios-email placeholder-icon icon__placeholder"></i>
                 <input type="email" placeholder="Email" ng-disabled="numcart==0" ng-model="user.email">
             </label>
             <label class="item item-input">
-                <i class="icon ion-ios-home placeholder-icon icon-placeholder"></i>
+                <i class="icon ion-ios-home placeholder-icon icon__placeholder"></i>
                 <input type="text" placeholder="Address" ng-disabled="numcart==0" ng-model="user.address">
             </label>
             <label class="item item-input">
-                <i class="icon ion-ios-telephone placeholder-icon icon-placeholder"></i>
+                <i class="icon ion-ios-telephone placeholder-icon icon__placeholder"></i>
                 <input type="tel" placeholder="Phone Number" ng-disabled="numcart==0" ng-model="user.phone">
             </label>
         </div>
-        <div class="div-icon-payment" ng-hide="numcart==0">
-            <i class="fa fa-cc-mastercard icon-card" aria-hidden="true"></i>
-            <i class="fa fa-credit-card icon-card" aria-hidden="true"></i>
-            <i class="fa fa-cc-visa icon-card" aria-hidden="true"></i>
+        <div class="icon--payment" ng-hide="numcart==0">
+            <i class="fa fa-cc-mastercard iconpayment__item" aria-hidden="true"></i>
+            <i class="fa fa-credit-card iconpayment__item" aria-hidden="true"></i>
+            <i class="fa fa-cc-visa iconpayment__item" aria-hidden="true"></i>
         </div>
-        <div class="div-button-pay" ng-hide="numcart==0">
-            <button class="button button-positive button-pay" ng-click="addCartToFirebase()" ng-disabled="numcart==0">
+        <div class="button--cart" ng-hide="numcart==0">
+            <button class="button button-positive button__pay" ng-click="addCartToFirebase()" ng-disabled="numcart==0">
             Submit
             </button>
         </div>

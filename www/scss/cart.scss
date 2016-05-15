@@ -1,0 +1,78 @@
+//colors
+$red: red;
+
+.content--cart {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 44px;
+}
+.labelcart {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.labelcart__title {
+	font-size: 20px;
+	font-weight: bold;
+}
+.labelcart__err {
+	width: 100%;
+	text-align: center;
+}
+.item__backgroundcart {
+	padding-left: 0 !important;
+}
+.image__cart {
+	text-align: center;
+	height: 100px;
+	margin-top: 1.5px;
+	margin-bottom: 3.5px;
+}
+.image--cart {
+	margin-left: 10px !important;
+}
+.label__itemcart {
+	margin-left: 4% !important;
+	margin-top: 10px;
+	text-align: center;
+}
+.dropdown__itemcart {
+	margin-left: 2% !important;
+	margin-top: 10px;
+	text-align: center;
+}
+.icon__removeitem {
+	font-size: 20px;
+	color: $red !important;
+}
+.labelpricecart {
+	float: right;
+	margin-right: 5px;
+}
+.labelpricecart__totallabel {
+	font-size: 15px;
+	font-weight: bold;
+}
+.labelpricecart__pricelabel {
+	font-size: 15px;
+	font-weight: bold;
+	color: $red;
+}
+.icon__placeholder {
+	font-size: 24px;
+}
+.icon--payment {
+	margin-left: 10px;
+	float: left;
+}
+.iconpayment__item {
+	font-size: 20px;
+}
+.button--cart {
+	clear: both;
+	text-align: center;
+	padding-top: 10px;
+}
+.button__pay {
+	width: 95%;
+}

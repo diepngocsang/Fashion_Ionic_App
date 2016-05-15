@@ -1,0 +1,66 @@
+//colors
+$red: red;
+$black: black;
+$color_azure_approx: #3b5998;
+$color_dodger_blue_approx: #1da1f2;
+$color_au_chico_approx: #8f634e;
+$white: white;
+
+.subheader__searchfield {
+	padding: 0 !important;
+}
+.tabs__menufooter {
+	padding-top: 0 !important;
+}
+.icon__menubag {
+	top: -23px !important;
+	right: 2.5px !important;
+	color: $red;
+}
+.icon__menuhome {
+	font-size: 31px;
+	margin-left: 15px;
+	color: $black;
+}
+.icon__menutoggle {
+	float: right;
+}
+.icon__menufacebook {
+	color: $color_azure_approx;
+}
+.icon__menuyoutube {
+	color: $red;
+}
+.icon__menutwitter {
+	color: $color_dodger_blue_approx;
+}
+.icon__menuinstagram {
+	color: $color_au_chico_approx;
+}
+.icon__menuitem {
+	margin-left: 20px;
+	font-size: 15px;
+}
+.headmenu {
+	background-color: $black !important;
+}
+.headmenu--title {
+	margin-top: 2px;
+	width: 100% !important;
+	text-align: center;
+	color: $white;
+}
+.headmenu__text {
+	font-size: 20px;
+	font-weight: bold;
+}
+.menu__detail {
+	padding: 7px 0;
+}
+.label__menuitem {
+	margin-left: 10px;
+	font-size: 15px;
+	color: $black;
+	font-style: normal;
+	text-decoration: none;
+}
